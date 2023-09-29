@@ -1,3 +1,5 @@
+package HWOne;
+
 public class One {
     public static int sum(int a, int b) {
         return a + b;

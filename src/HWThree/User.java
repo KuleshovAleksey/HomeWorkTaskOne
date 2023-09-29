@@ -1,3 +1,5 @@
+package HWThree;
+
 public class User {
     String firstName;
     String lastName;
@@ -11,7 +13,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "HWThree.User{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +

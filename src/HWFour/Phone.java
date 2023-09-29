@@ -1,3 +1,5 @@
+package HWFour;
+
 public class Phone {
     int number;
     String model;
@@ -18,7 +20,7 @@ public class Phone {
 
     @Override
     public String toString() {
-        return "Phone{" +
+        return "HWFour.Phone{" +
                 "number=" + number +
                 ", model='" + model + '\'' +
                 ", weight=" + weight +

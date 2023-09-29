@@ -1,3 +1,5 @@
+package HWThree;
+
 import java.util.Arrays;
 
 public class Three {
@@ -78,7 +80,7 @@ public class Three {
         }
     }
     // ДЗ №3 пункт 5
-    // создан отдельный класс User
+    // создан отдельный класс HWThree.User
 
     public static void main(String[] args) {
         // ДЗ №3 пункт 1  проверка
@@ -94,13 +96,13 @@ public class Three {
         // twelveRandomNumbers();
 
         // ДЗ №3 пункт 5 проверка
-      /*  User [] users = new User[5];
-        users[0] = new User("Иванов", "Иван", 18);
-        users[1] = new User("Петров", "Петр", 81);
-        users[2] = new User("Семенов", "Семен", 33);
-        users[3] = new User("Сидоров", "Сидар", 50);
-        users[4] = new User("Владимиров", "Владимир", 99);
-        for (User u: users) {
+      /*  HWThree.User [] users = new HWThree.User[5];
+        users[0] = new HWThree.User("Иванов", "Иван", 18);
+        users[1] = new HWThree.User("Петров", "Петр", 81);
+        users[2] = new HWThree.User("Семенов", "Семен", 33);
+        users[3] = new HWThree.User("Сидоров", "Сидар", 50);
+        users[4] = new HWThree.User("Владимиров", "Владимир", 99);
+        for (HWThree.User u: users) {
             System.out.println(u);
         } */
     }
