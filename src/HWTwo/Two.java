@@ -26,28 +26,30 @@ public class Two {
     private static void closerToTen(int n, int m) {
         if (abs(n - 10) > abs(m - 10)) {
             System.out.println("Из чисел n = " + n + " и m = " + m + " число " + m + " ближе к 10");
-        } else if (abs(n - 10) < abs(m - 10))
+        } else if (abs(n - 10) < abs(m - 10)) {
             System.out.println("Из чисел n = " + n + " и m = " + m + " число " + n + " ближе к 10");
-        else if (abs(n - 10) == abs(m - 10)) System.out.println("Числа равно удалены от 10");
+        } else
+            System.out.println("Числа равно удалены от 10");
     }
 
     // ДЗ №2 пункт 3
     private static void includesInRange() {
-        int i = (int) (Math.random() * (155 - 5)) + 5;
+        int i = (int) (Math.random() * (151) + 5);
         if (i > 25 & i < 100) {
             System.out.println("Число " + i + " содержится в интервале (25,100)");
         } else System.out.println("Число " + i + " не  содержится в интервале (25,100)");
     }
 
     // ДЗ №2 пункт 4
-    private static void maxNum() {
-        int num = (int) (Math.random() * (999 - 100)) + 100;
+    private static int maxNum() {
+        int num = (int) (Math.random() * 900) + 100;
         String st = Integer.toString(num);
         int[] arr = new int[st.length()];
         for (int i = 0; i < st.length(); i++) {
             arr[i] = Integer.parseInt(String.valueOf(st.charAt(i)));
         }
         System.out.println("В числе " + num + " наибольшая цифра " + Arrays.stream(arr).max().getAsInt());
+        return num;
     }
 
     // ДЗ №2 пункт 5
@@ -58,21 +60,13 @@ public class Two {
         System.out.println("Числа в переменных a, b и c: " + a + ", " + b + ", " + c + ",");
         int[] arr = {a, b, c};
         Arrays.sort(arr);
-        a = arr[0];
-        b = arr[1];
-        c = arr[2];
-        System.out.println("Возрастающая последовательность: " + a + ", " + b + ", " + c + ",");
+        System.out.println("Возрастающая последовательность: " + arr[0] + ", " + arr[1] + ", " + arr[2] + ",");
     }
 
     // ДЗ №2 пункт 6
     private static void fourStartSequence() {
-        int start = 1000;
-        int end = 9999;
-        int step = 3;
-        int current = start;
-        while (current <= end) {
-            System.out.println(current);
-            current = current + step;
+        for (int i = 1000; i < 10000; i = i + 3) { //нарушается принцип с того что начало цикла должно быть с 0, но по другому не придумал
+            System.out.println(i);
         }
     }
 
@@ -81,7 +75,7 @@ public class Two {
         int start = 1;
         int counter = 55;
         int step = 2;
-        for (int i = 1; i <= counter; i++) {
+        for (int i = 0; i < counter; i++) {
             System.out.println(start);
             start = start + step;
         }
@@ -155,16 +149,16 @@ public class Two {
         //  closerToTen(25, -5);
 
         // ДЗ №2 пункт 3 проверка
-        //  includesInRange();
+        //    includesInRange();
 
         // ДЗ №2 пункт 4 проверка
-        //  maxNum();
+        //   maxNum();
 
         // ДЗ №2 пункт 5 проверка
         //  sortNumbers();
 
         // ДЗ №2 пункт 6 проверка
-        // fourStartSequence();
+       //  fourStartSequence();
 
         // ДЗ №2 пункт 7 проверка
         // firstFiftyFive();

@@ -33,9 +33,15 @@ public class Reader {
         System.out.println(fio + " взял " + numberOfBooks + books(numberOfBooks));
     }
 
-    public void takeBook(int numberOfBooks, String[] nameBooks) {
-
-        System.out.println(fio + " int numberOfBooks");
+    public void takeBook(String fio, String ... nameBooks) {
+        System.out.print(fio + " взял книги: ");
+        for(int i = 0; i < nameBooks.length; i++){
+            System.out.print(nameBooks[i]);
+            if(i < nameBooks.length-1){
+                System.out.print(", ");
+            }
+        }
+        System.out.println(".");
     }
 
     public void returnBook() {
@@ -43,9 +49,9 @@ public class Reader {
 
     public static void main(String[] args) {
         Reader reader = new Reader();
-        for (int i = 0; i < 101; i++) {
-            reader.takeBook("asd", i);
-        }
+
+            reader.takeBook("asd", "1", "2", "3");
+
 
     }
 }

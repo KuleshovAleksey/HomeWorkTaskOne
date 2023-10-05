@@ -96,6 +96,16 @@ public class One {
     public static short division(short a, short b) {
         return (short) (a / b);
     }
+    // Решиние пункта 1 задания 2
+    public static double linearEquation(double a, double b){
+        if (a == 0 && b != 0) {
+            System.out.print("линейное уравнение с одной переменной корней не имеет вообще ");
+        } else if (a == 0 && b == 0) {
+            System.out.print("корней у уравнения бесконечное множество ");
+        } else
+            System.out.print("Рещением линейного уравнения " + a + "x + " + b + " = 0 равно ");
+        return -b / a;
+    }
 
 
     public static void main(String[] args) {
@@ -125,16 +135,9 @@ public class One {
         System.out.println("division " + division(2.3f, 23335f));
         System.out.println("division " + division((short) 2, (short) 25));
 
-        // Решение пункта 2 ( ax + b = 0.
-        double a = -4;
-        double b = 15;
-        if (a == 0 && b != 0) {
-            System.out.println("линейное уравнение с одной переменной корней не имеет вообще");
-        } else if (a == 0 && b == 0) {
-            System.out.println("корней у уравнения бесконечное множество");
-        } else
-            System.out.println("Рещением линейного уравнения " + a + "x + " + b + " = 0 равно " + -b / a);
-
+        // Решение пункта 2 ( ax + b = 0. проверка
+        System.out.println(linearEquation(5.4,10.3));
+        System.out.println(linearEquation(0,10.3));
 
     }
 
