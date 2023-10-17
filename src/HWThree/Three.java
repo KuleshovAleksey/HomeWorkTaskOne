@@ -6,17 +6,17 @@ public class Three {
 
     // ДЗ №3 пункт 1
     private static void array() {
-        Integer[] arr = {1, 2, 3, 4, 5};
+        Integer[] arr = {1, 3, 2, 6, 7};
         System.out.println("Массив ");
         for (int i : arr) {
             System.out.print(i + " ");
         }
         System.out.println();
-        System.out.println("Обратная сортировка ");
-        Arrays.sort(arr, (i1, i2) -> Integer.compare(i2, i1));
-        for (int i : arr) {
-            System.out.print(i + " ");
+        System.out.println("Обратная сортировка "); // изменил вывод массива, в место обратной сортировки
+        for(int i = arr.length-1; i>=0; i--){
+            System.out.print(arr[i] + " ");
         }
+
     }
 
     // ДЗ №3 пункт 2
@@ -84,7 +84,7 @@ public class Three {
 
     public static void main(String[] args) {
         // ДЗ №3 пункт 1  проверка
-        // array();
+         array();
 
         // ДЗ №3 пункт 2 проверка
         // sevenRandomNumbers();
