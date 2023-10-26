@@ -28,12 +28,12 @@ public class Reader {
 
     //1
     public void takeBook(int numberOfBooks) {
-        System.out.println(fio + " взял " + numberOfBooks + booksCount(numberOfBooks));
+        System.out.println(fio + " взял " + numberOfBooks + " " + booksCount(numberOfBooks));
     }
 
     //2
     public void takeBook(String... nameBooks) {
-        System.out.print(fio + " взял " + booksCount(nameBooks.length));
+        System.out.print(fio + " взял " + booksCount(nameBooks.length) + " ");
         for (int i = 0; i < nameBooks.length; i++) {
             System.out.print(nameBooks[i]);
             if (i < nameBooks.length - 1) {
@@ -45,11 +45,11 @@ public class Reader {
 
     //3
     public void takeBook(Book... books) {
-        System.out.println(fio + " взял " + booksCount(books.length));
+        System.out.print(fio + " взял " + booksCount(books.length) + " ");
         for (int i = 0; i < books.length; i++) {
-            System.out.println(books[i].getTitle() + " (" + books[i].getAuthor() + ")");
+            System.out.print(books[i].getTitle() + " (" + books[i].getAuthor() + ")");
             if (i < books.length - 1) {
-                System.out.println(", ");
+                System.out.print(", ");
             }
         }
         System.out.println(". ");
@@ -57,12 +57,12 @@ public class Reader {
 
     //1
     public void returnBook(int numberOfBooks) {
-        System.out.println(fio + " сдал " + numberOfBooks + booksCount(numberOfBooks));
+        System.out.println(fio + " сдал " + numberOfBooks + " " + booksCount(numberOfBooks));
     }
 
     //2
     public void returnBook(String... nameBooks) {
-        System.out.print(fio + " сдал " + booksCount(nameBooks.length));
+        System.out.print(fio + " сдал " + booksCount(nameBooks.length) + " ");
         for (int i = 0; i < nameBooks.length; i++) {
             System.out.print(nameBooks[i]);
             if (i < nameBooks.length - 1) {
@@ -74,18 +74,32 @@ public class Reader {
 
     //3
     public void returnBook(Book... books) {
-        System.out.println(fio + " сдал " + booksCount(books.length));
+        System.out.print(fio + " сдал " + booksCount(books.length) + " ");
         for (int i = 0; i < books.length; i++) {
-            System.out.println(books[i].getTitle() + " (" + books[i].getAuthor() + ")");
+            System.out.print(books[i].getTitle() + " (" + books[i].getAuthor() + ")");
             if (i < books.length - 1) {
-                System.out.println(", ");
+                System.out.print(", ");
             }
         }
         System.out.println(". ");
     }
 
+    public static void main(String[] args) {
+        Reader Oleg = new Reader("Oleg", "4", "ekonom", "23.10.2000", "375291234567");
+        Reader Vasia = new Reader("Vasia", "16", "ekonom", "01.01.2000", "375297654321");
+        Book one = new Book("Captain's daughter", "A. S. Pushkin");
+        Book two = new Book("Hero of our time", "M. J. Lermontov");
+        Book three = new Book("Life on borrowed time", "E. M. Remarque");
+        Oleg.takeBook(2);
+        Oleg.takeBook("Captain's daughter", "Hero of our time");
+        Oleg.takeBook(one, two);
+        Vasia.returnBook(1);
+        Vasia.returnBook("Life on borrowed time");
+        Vasia.returnBook(three);
 
-    class Book {
+    }
+
+    static class Book {
         private String title;
         private String author;
 
@@ -99,7 +113,7 @@ public class Reader {
         }
 
         public String getAuthor() {
-            return  author;
+            return author;
         }
     }
 }
