@@ -16,7 +16,7 @@ public class Reader {
     }
 
     public String booksCount(int numberOfBooks) {
-        String[] books = {" книг ", " книгу ", " книги "};
+        String[] books = {"книг", "книгу", "книги"};
         String result;
         if (numberOfBooks % 10 > 4 && numberOfBooks % 10 < 21 || numberOfBooks % 10 == 0) result = books[0];
         else if (numberOfBooks % 10 == 1 && numberOfBooks != 11) result = books[1];
@@ -84,6 +84,7 @@ public class Reader {
         System.out.println(". ");
     }
 
+
     class Book {
         private String title;
         private String author;
@@ -98,7 +99,7 @@ public class Reader {
         }
 
         public String getAuthor() {
-            return "(" + author + ")";
+            return  author;
         }
     }
 }
